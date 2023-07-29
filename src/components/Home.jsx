@@ -1,26 +1,31 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
-import img1 from "../assets/1.png"
+import { Box, } from '@chakra-ui/react'
+import img3 from "../assets/3.png"
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return (
         <Box
         position="relative"
         display="inline-block"
-        height="70%"
+        height="90%"
         width="100%"
         overflow="hidden"
+        backgroundColor={'black'}
+        
       >
         <img
-          src={img1}
+          src={img3}
           alt="Responsive Img"
           style={{
             width: '100%',
             height: 'auto',
             objectFit: 'cover',
-            filter: 'grayscale(1) brightness(0.7)', // Combining greyscale and brightness
           }}
+          
+          
         />
+
         <Box
           position="absolute"
           top="0"
@@ -30,7 +35,28 @@ const Home = () => {
           bg="black"
           opacity="0.5" // You can adjust the opacity level here (0.5 = 50%)
         />
+        <Box
+          position="absolute"
+          top="30%"
+          left="50%"
+          transform="translate(-20%, -50%)"
+          color={"whitesmoke"}
+          p="4"
+          borderRadius="md"
+          fontSize={"6xl"}
+          fontFamily={"monospace"}
+        >
+        <Typewriter
+          options={{
+            strings: ['Welcome to My Portfolio', 'I am a Web Developer', 'Graphic Designer', 'UI/UX Designer'],
+            autoStart: true,
+            loop: true,
+          }}
+        />
       </Box>
+        
+      </Box>
+      
   )
 }
 
