@@ -26,7 +26,7 @@ const Header = () => {
           onMouseOut={(e) => {
             e.currentTarget.style.color = 'white';
           }}>
-        <Link to="/About">About</Link>
+        <Link to="/Overview">Overview</Link>
       </Button>
 
       <Button variant={"ghost"} style={{  color: 'white' }}

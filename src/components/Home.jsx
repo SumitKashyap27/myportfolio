@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, } from '@chakra-ui/react'
+import { Box,} from '@chakra-ui/react'
 import img3 from "../assets/3.png"
 import Typewriter from 'typewriter-effect';
 
@@ -12,6 +12,7 @@ const Home = () => {
         width="100%"
         overflow="hidden"
         backgroundColor={'black'}
+        
         
       >
         <img
@@ -48,16 +49,21 @@ const Home = () => {
         >
         <Typewriter
           options={{
-            strings: ['Welcome to My Portfolio', 'I am a Web Developer', 'Graphic Designer', 'UI/UX Designer'],
+            strings: ['Hey!',
+            'Welcome to My <Portfolio>Portfolio</Portfolio>',
+            'I am a <Web>Web Developer</Web>',
+            '<Graphic>Graphic</Graphic> Designer',
+            '<UI/UX>UI/UX</UI/UX> Designer'],
             autoStart: true,
             loop: true,
+            wrapperClassName:"typewriter-wrapper",
           }}
         />
-      </Box>
         
       </Box>
       
+        
+      </Box>
   )
 }
-
 export default Home
