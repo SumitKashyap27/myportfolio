@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Heading, Stack, Text, Card, CardHeader, CardBody, CardFooter, Button, SimpleGrid, Center} from '@chakra-ui/react';
+import { Box, Container, Heading, Stack, Text, Card, CardHeader, CardBody, CardFooter, Button, SimpleGrid, Center,  } from '@chakra-ui/react';
 
 const Overview = () => {
   return (
@@ -46,9 +46,9 @@ const Overview = () => {
         </Stack>
     </Container>
     <Center minH="30vh">
-      <Box maxW={{ base: "container.sm", md: "container.md", lg: "container.xl" }} p={16} mt={0} pt={0}>
+      <Box maxW={{ base: "container.sm", md: "container.md", lg: "container.xl" }} p={16}>
         <SimpleGrid spacing={5} align="center" templateColumns="repeat(4, 1fr)">
-          <Card>
+          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
             </CardHeader>
@@ -59,7 +59,7 @@ const Overview = () => {
               <Button>View here</Button>
             </CardFooter>
           </Card>
-          <Card>
+          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
             </CardHeader>
@@ -70,7 +70,7 @@ const Overview = () => {
               <Button>View here</Button>
             </CardFooter>
           </Card>
-          <Card>
+          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
             </CardHeader>
@@ -81,7 +81,7 @@ const Overview = () => {
               <Button>View here</Button>
             </CardFooter>
           </Card>
-          <Card>
+          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
             </CardHeader>
