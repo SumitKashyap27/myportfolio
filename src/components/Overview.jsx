@@ -1,4 +1,5 @@
 import React from 'react'
+import img from '../assets/reacticon.gif';
 import { Box, Container, Heading, Stack, Text, Card, CardHeader, CardBody, CardFooter, Button, SimpleGrid, Center,} from '@chakra-ui/react';
 
 const Overview = () => {
@@ -6,7 +7,6 @@ const Overview = () => {
     <Box 
     position="relative"
         display="inline-block"
-        height="90%"
         width="100%"
         overflow="hidden"
         backgroundColor={'black'}
@@ -45,19 +45,43 @@ const Overview = () => {
         </Text>
         </Stack>
     </Container>
-    <Center minH="30vh">
-      <Box 
-      maxW={{ base: "container.sm", md: "container.md", lg: "container.xl" }} 
-      p={16}
+      <Center minH="30vh">
+        <Box 
+          maxW={{ base: "container.sm", md: "container.md", lg: "container.xl" }} 
+          p={16}
         >
         <SimpleGrid spacing={9} align="center" templateColumns="repeat(4, 1fr)">
-          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}      
+          <Card variant="elevated"
+          position="relative"
+          transformStyle="preserve-3d"
+          transform="perspective(1000px)"
+          transition="transform 0.3s"
           bg="gray.200" 
           borderRadius="lg"
           boxShadow="0 0 5px rgba(255, 255, 255, 0.6)"
-          transition="box-shadow 0.3s ease-in-out" 
-          hover={{
-          boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)"}}>
+          onMouseMove={(e) => {
+        const card = e.currentTarget;
+        const { left, top, width, height } = card.getBoundingClientRect();
+        const x = (e.pageX - left - width / 2) / width;
+        const y = (e.pageY - top - height / 2) / height;
+        const rotationValue = 10;
+        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
+        }}
+          onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
+        }}>
+          <img
+        src={img}
+        alt="Web Development Icon"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "80px", // Adjust the size of the icon as per your requirement
+          height: "80px", // Adjust the size of the icon as per your requirement
+        }}
+      />
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
             </CardHeader>
@@ -68,7 +92,56 @@ const Overview = () => {
               <Button>View here</Button>
             </CardFooter>
           </Card>
-          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}>
+          <Card
+          variant="elevated"
+          position="relative"
+          transformStyle="preserve-3d"
+          transform="perspective(1000px)"
+          transition="transform 0.3s"
+          bg="gray.200" 
+          borderRadius="lg"
+          boxShadow="0 0 5px rgba(255, 255, 255, 0.6)"
+          onMouseMove={(e) => {
+        const card = e.currentTarget;
+        const { left, top, width, height } = card.getBoundingClientRect();
+        const x = (e.pageX - left - width / 2) / width;
+        const y = (e.pageY - top - height / 2) / height;
+        const rotationValue = 10;
+        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
+        }}
+      >
+      <CardHeader>
+        <Heading size="md">Customer dashboard</Heading>
+      </CardHeader>
+      <CardBody>
+        <Text>View a summary of all your customers over the last month.</Text>
+      </CardBody>
+      <CardFooter>
+        <Button>View here</Button>
+      </CardFooter>
+    </Card>
+          <Card variant="elevated"
+          position="relative"
+          transformStyle="preserve-3d"
+          transform="perspective(1000px)"
+          transition="transform 0.3s"
+          bg="gray.200" 
+          borderRadius="lg"
+          boxShadow="0 0 5px rgba(255, 255, 255, 0.6)"
+          onMouseMove={(e) => {
+        const card = e.currentTarget;
+        const { left, top, width, height } = card.getBoundingClientRect();
+        const x = (e.pageX - left - width / 2) / width;
+        const y = (e.pageY - top - height / 2) / height;
+        const rotationValue = 10;
+        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
+      }}
+        onMouseLeave={(e) => {
+         e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
+        }}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
             </CardHeader>
@@ -79,18 +152,25 @@ const Overview = () => {
               <Button>View here</Button>
             </CardFooter>
           </Card>
-          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}>
-            <CardHeader>
-              <Heading size="md">Customer dashboard</Heading>
-            </CardHeader>
-            <CardBody>
-              <Text>View a summary of all your customers over the last month.</Text>
-            </CardBody>
-            <CardFooter>
-              <Button>View here</Button>
-            </CardFooter>
-          </Card>
-          <Card variant={"elevated"}bgGradient={'linear(to-tr, #7928CA, #FF0080)'}>
+          <Card variant="elevated"
+          position="relative"
+          transformStyle="preserve-3d"
+          transform="perspective(1000px)"
+          transition="transform 0.3s"
+          bg="gray.200" 
+          borderRadius="lg"
+          boxShadow="0 0 5px rgba(255, 255, 255, 0.6)"
+          onMouseMove={(e) => {
+        const card = e.currentTarget;
+        const { left, top, width, height } = card.getBoundingClientRect();
+        const x = (e.pageX - left - width / 2) / width;
+        const y = (e.pageY - top - height / 2) / height;
+        const rotationValue = 5;
+        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
+      }}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
             </CardHeader>

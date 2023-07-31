@@ -8,12 +8,9 @@ const Home = () => {
         <Box
         position="relative"
         display="inline-block"
-        height="90%"
         width="100%"
         overflow="hidden"
-        backgroundColor={'black'}
-        
-        
+        backgroundColor={'black'}        
       >
         <img
           src={img3}
@@ -31,6 +28,7 @@ const Home = () => {
           position="absolute"
           top="0"
           left="0"
+          bottom="0"
           w="100%"
           h="100%"
           bg="black"
@@ -67,9 +65,7 @@ const Home = () => {
           }}
         />
         </Stack>
-      </Box>
-      
-        
+      </Box>  
       </Box>
       
   )
