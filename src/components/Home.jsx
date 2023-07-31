@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box,} from '@chakra-ui/react'
+import { Box, Stack,} from '@chakra-ui/react'
 import img3 from "../assets/3.png"
 import Typewriter from 'typewriter-effect';
 
@@ -47,7 +47,14 @@ const Home = () => {
           fontSize={"6xl"}
           fontFamily={"monospace"}
         >
+          <Stack
+
+           direction={['column','row']}
+           fontSize={['2xl','6xl']}
+           pt={["6","4"]}
+          >
         <Typewriter
+        
           options={{
             strings: ['Hey!',
             'Welcome to My <Portfolio>Portfolio</Portfolio>',
@@ -59,11 +66,12 @@ const Home = () => {
             wrapperClassName:"typewriter-wrapper",
           }}
         />
-        
+        </Stack>
       </Box>
       
         
       </Box>
+      
   )
 }
 export default Home
