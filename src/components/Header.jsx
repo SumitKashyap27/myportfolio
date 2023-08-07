@@ -42,11 +42,11 @@ const Header = () => {
         bgColor="blackAlpha.900"
         justify="space-between"
       >
-        <div bold>
-          <Link to="/" style={{ color: 'white' }}>
-            SUMIT KASHYAP
-          </Link>
-        </div>
+      <div style={{ fontWeight: 'bold' }}>
+        <Link to="/" style={{ color: 'white' }}>
+          SUMIT KASHYAP
+        </Link>
+      </div>
 
         <div>
           {!showHamburger ? (
@@ -123,7 +123,7 @@ const Header = () => {
         </div>
       </HStack>
 
-      
+
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>

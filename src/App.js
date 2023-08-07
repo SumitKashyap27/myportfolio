@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -10,11 +9,11 @@ function App() {
     <Router>
       <Header />
       <div style={{ backgroundColor: "black" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/overview" element={<Overview />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <Routes>
+        <Route key="home" path="/" element={<Home />} />
+        <Route key="overview" path="/Overview" element={<Overview />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       </div>
     </Router>
   );
