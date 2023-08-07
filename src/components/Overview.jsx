@@ -146,8 +146,8 @@ const Overview = () => {
         e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
       }}
       style={{
-        width: "225px", // Adjust the width here
-        height: "275px", // Adjust the height here
+        width: "225px",
+        height: "275px", 
       }}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>
@@ -179,8 +179,8 @@ const Overview = () => {
         e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
       }}
       style={{
-        width: "225px", // Adjust the width here
-        height: "275px", // Adjust the height here
+        width: "225px", 
+        height: "275px", 
       }}>
             <CardHeader>
               <Heading size="md">Customer dashboard</Heading>

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Stack,} from '@chakra-ui/react'
+import { Box, Stack,Heading} from '@chakra-ui/react'
 import img3 from "../assets/3.png"
 import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return (
-        <Box
+      <Box
         position="relative"
         display="inline-block"
         width="100%"
@@ -32,7 +32,7 @@ const Home = () => {
           w="100%"
           h="100%"
           bg="black"
-          opacity="0.5" // You can adjust the opacity level here (0.5 = 50%)
+          opacity="0.5"
         />
         <Box
           position="absolute"
@@ -45,16 +45,20 @@ const Home = () => {
           fontSize={"6xl"}
           fontFamily={"monospace"}
         >
-          <Stack
-
-           direction={['column','row']}
-           fontSize={['2xl','6xl']}
-           pt={["6","4"]}
-          >
+        <Stack
+          direction="column"
+          pt={"50"}
+          spacing="4"
+          fontSize={{ base: '3xl', md: '6xl' }}
+          py={["6", "4"]} 
+        >
+          <Heading pt={10} as="h1" size="xl" fontWeight="bold" color="white">
+            Hey!
+          </Heading>
         <Typewriter
         
           options={{
-            strings: ['Hey!',
+            strings: [
             'Welcome to My <Portfolio>Portfolio</Portfolio>',
             'I am a <Web>Web Developer</Web>',
             '<Graphic>Graphic</Graphic> Designer',
