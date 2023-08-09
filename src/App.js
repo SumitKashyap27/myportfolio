@@ -10,8 +10,8 @@ function App() {
       <Header />
       <div style={{ backgroundColor: "black" }}>
       <Routes>
-        <Route key="home" path="/" element={<Home />} />
-        <Route key="overview" path="/Overview" element={<Overview />} />
+        <Route key="Home" path="/" element={[<Home />,<Overview/>]} />
+        <Route key="Overview" path="/Overview" element={<Overview />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       </div>

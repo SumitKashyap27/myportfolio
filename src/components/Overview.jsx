@@ -11,7 +11,8 @@ const Overview = () => {
         overflow="hidden"
         backgroundColor={'black'}
         mb={0}
-        pb={0}>
+        pb={0}
+        id='overview'>
 
     <Container maxW={'fit-content'} p={'16'}>
         <Heading textTransform={'uppercase'}
@@ -200,4 +201,4 @@ const Overview = () => {
   )
 }
 
-export default Overview;
+export default Overview
