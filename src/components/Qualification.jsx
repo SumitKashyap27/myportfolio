@@ -42,7 +42,7 @@ const Qualification = () => {
       fontFamily="Nunito, sans-serif"
       padding="2rem 0"
       textAlign="center"
-      backgroundColor="#232323"
+      backgroundColor="black"
       position="relative"
       zIndex="3"
       initial={{ opacity: 0, y: 20 }}
@@ -58,10 +58,11 @@ const Qualification = () => {
         mode={mode}
         hideControls
         theme={{
-          primary: "#5969BA",
-          secondary: "#E6E8FA",
-          cardBgColor: "#d0d0d0",
-        }}
+                primary: "#FFFFFF", // White color for the timeline lines and dots
+                secondary: "#9CA3AF", // Gray color for the card connector lines
+                cardBgColor: "#1F2937", // Dark gray color for the card background
+                cardForeColor: "#FFFFFF", // White color for card text
+            }}
       />
     </AnimatedBox>
   );
