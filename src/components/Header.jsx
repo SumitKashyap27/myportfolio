@@ -38,7 +38,7 @@ function Header() {
             variants={linkVariants}
             initial="hidden"
             animate="visible"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.15 }}
           >
             <ReactRouterHashLink smooth to="/#home" _hover={{ textDecoration: "underline", color: "white" }}>
               Home
@@ -48,7 +48,7 @@ function Header() {
             variants={linkVariants}
             initial="hidden"
             animate="visible"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.15 }}
           >
             <ReactRouterHashLink smooth to="/#contact" as={ChakraLink} _hover={{ textDecoration: "underline", color: "teal.300" }}>
               Contact
@@ -58,7 +58,17 @@ function Header() {
             variants={linkVariants}
             initial="hidden"
             animate="visible"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.15 }}
+          >
+            <ReactRouterHashLink smooth to="/#qualification" as={ChakraLink} _hover={{ textDecoration: "underline", color: "teal.300" }}>
+              Qualification
+            </ReactRouterHashLink>
+          </MotionBox>
+          <MotionBox
+            variants={linkVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.15 }}
           >
             <ReactRouterHashLink smooth to="/#overview" _hover={{ textDecoration: "underline", color: "teal.300" }}>
               Overview
@@ -68,7 +78,7 @@ function Header() {
             variants={linkVariants}
             initial="hidden"
             animate="visible"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.15 }}
           >
             <Button
               as="a"

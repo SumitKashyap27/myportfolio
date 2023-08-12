@@ -60,7 +60,7 @@ const Overview = () => {
           transition="transform 0.3s"
           bg="gray.200" 
           borderRadius="lg"
-          boxShadow="0 0 100px rgba(255, 255, 255, 0.6)"
+          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
           onMouseMove={(e) => {
         const card = e.currentTarget;
         const { left, top, width, height } = card.getBoundingClientRect();
@@ -101,7 +101,7 @@ const Overview = () => {
           transition="transform 0.3s"
           bg="gray.200" 
           borderRadius="lg"
-          boxShadow="0 0 100px rgba(255, 255, 255, 0.6)"
+          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
           onMouseMove={(e) => {
         const card = e.currentTarget;
         const { left, top, width, height } = card.getBoundingClientRect();
@@ -134,7 +134,7 @@ const Overview = () => {
           transition="transform 0.3s"
           bg="gray.200" 
           borderRadius="lg"
-          boxShadow="0 0 100px rgba(255, 255, 255, 0.6)"
+          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
           onMouseMove={(e) => {
         const card = e.currentTarget;
         const { left, top, width, height } = card.getBoundingClientRect();
@@ -167,7 +167,7 @@ const Overview = () => {
           transition="transform 0.3s"
           bg="gray.200" 
           borderRadius="lg"
-          boxShadow="0 0 100px rgba(255, 255, 255, 0.6)"
+          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
           onMouseMove={(e) => {
         const card = e.currentTarget;
         const { left, top, width, height } = card.getBoundingClientRect();
