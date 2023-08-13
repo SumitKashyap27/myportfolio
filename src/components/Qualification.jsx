@@ -1,70 +1,97 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { Chrono } from "react-chrono";
-
-const AnimatedBox = motion(Box);
+import { Box,  } from "@chakra-ui/react";
 
 const Qualification = () => {
-  const bigScreenMode = "VERTICAL_ALTERNATING";
-  const smallScreenMode = "VERTICAL";
-
-  const [oss1, oss2, oss3, oss4] = [
-    "Ranked 26th out of 1000+ participants in DevScript's Winter of Code",
-    // ... (other items)
-  ];
-
-  const [int1, int2, int3, int4, int5, int6] = [
-    "Conducted website benchmarking and created sitemaps based on similar agencies.",
-    // ... (other items)
-  ];
-
-  const history = [
-    {
-      title: "May 2022 to Aug 2022",
-      cardTitle: "Web Developer Apprentice",
-      cardSubtitle: "Brand Geeks Inc",
-      cardDetailedText: [int1, int2, int3, int4, int5, int6],
+  const entryStyles = {
+    width: "calc(50% - 80px)",
+    float: "left",
+    padding: "10px",
+    clear: "both",
+    "&:nth-child(2n)": {
+      float: "right",
+      textAlign: "left",
     },
-    {
-      title: "Dec 2020 to Feb 2021",
-      cardTitle: "Open-source Contributor",
-      cardSubtitle: "DevScript",
-      cardDetailedText: [oss1, oss2, oss3, oss4],
-    },
-    // ... (other items)
-  ];
+  };
 
-  const mode = window.innerWidth <= 850 ? smallScreenMode : bigScreenMode;
+  const titleStyles = {
+    fontSize: "32px",
+    marginBottom: "12px",
+    position: "relative",
+    color: "#fff",
+  };
+
+  const bigTitleStyles = {
+    width: "24px",
+    height: "24px",
+    transform: "translate(8px, -50%)",
+  };
 
   return (
-    <AnimatedBox
-      fontFamily="Nunito, sans-serif"
-      padding="2rem 0"
-      textAlign="center"
-      backgroundColor="black"
+    <Box
+      fontFamily="Droid Sans, sans-serif"
+      backgroundColor="#1D1D1D"
+      minHeight="100vh"
+      margin="0"
       position="relative"
-      zIndex="3"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 2 }}
-      id={'qualification'}
+      css={{
+        "&:before": {
+          content: "''",
+          position: "fixed",
+          top: "60px",
+          left: "50%",
+          bottom: "0px",
+          transform: "translateX(-50%)",
+          width: "4px",
+          backgroundColor: "#fff",
+        },
+      }}
     >
-      <Text fontSize="3xl" fontWeight="bold" color="white" mb="2rem">
-        My Educational Journey
-      </Text>
-      <Chrono
-        items={history}
-        mode={mode}
-        hideControls
-        theme={{
-                primary: "#FFFFFF", // White color for the timeline lines and dots
-                secondary: "#9CA3AF", // Gray color for the card connector lines
-                cardBgColor: "#1F2937", // Dark gray color for the card background
-                cardForeColor: "#FFFFFF", // White color for card text
-            }}
-      />
-    </AnimatedBox>
+      <Box
+        width="calc(100% - 80px)"
+        maxWidth="800px"
+        margin="auto"
+        position="relative"
+        left="-5px"
+        css={{
+          ".entry": entryStyles,
+          ".title": titleStyles,
+          ".big": bigTitleStyles,
+        }}
+      >
+        {/* Entry 1 */}
+        <div className="entry">
+          <div className="title">2011</div>
+          <Box color="#aaa">
+            <p>
+              Neque sunt voluptatibus repellat pariatur ut enim. Eveniet rerum
+              suscipit eveniet amet dignissimos. Doloremque et distinctio quod
+              molestiae ut.
+            </p>
+          </Box>
+        </div>
+
+        {/* Entry 2 */}
+        <div className="entry">
+          <div className="title">2012</div>
+          <Box color="#aaa">
+            <p>Quo nobis cumque dolor iure voluptatem voluptatem alias soluta.</p>
+          </Box>
+        </div>
+
+        {/* Entry 3 */}
+        <div className="entry">
+          <div className="title big">2013</div>
+          <Box color="#aaa">
+            <p>
+              Rerum sit libero possimus amet excepturi. Exercitationem enim
+              dolores sunt praesentium dolorum praesentium.
+            </p>
+          </Box>
+        </div>
+
+        {/* Add more entries following the same structure */}
+      </Box>
+    </Box>
   );
 };
 
