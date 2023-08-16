@@ -1,98 +1,108 @@
-import React from "react";
-import { Box,  } from "@chakra-ui/react";
+import React, { Component } from "react";
+import { Chrono } from "react-chrono";
+import { Box } from "@chakra-ui/react";
 
-const Qualification = () => {
-  const entryStyles = {
-    width: "calc(50% - 80px)",
-    float: "left",
-    padding: "10px",
-    clear: "both",
-    "&:nth-child(2n)": {
-      float: "right",
-      textAlign: "left",
-    },
-  };
+class EducationTimeline extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      matches: window.matchMedia("(min-width: 768px)").matches,
+    };
+  }
 
-  const titleStyles = {
-    fontSize: "32px",
-    marginBottom: "12px",
-    position: "relative",
-    color: "#fff",
-  };
+  componentDidMount() {
+    const handler = (e) => this.setState({ matches: e.matches });
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener("change", handler);
+  }
 
-  const bigTitleStyles = {
-    width: "24px",
-    height: "24px",
-    transform: "translate(8px, -50%)",
-  };
+  render() {
+    const items = [
+      {
+        title: "example",
+        cardTitle: "example",
+        cardSubtitle: "example",
+        cardDetailedText: "example",
+      },
+      {
+        title: "example",
+        cardTitle: "example",
+        cardSubtitle: "example",
+        cardDetailedText: "example",
+      },
+      {
+        title: "example",
+        cardTitle: "example",
+        cardSubtitle: "example",
+        cardDetailedText: "example",
+      },
+      {
+        title: "example",
+        cardTitle: "example",
+        cardSubtitle: "example",
+        cardDetailedText: "example",
+      },
+    ];
 
-  return (
-    <Box
-      fontFamily="Droid Sans, sans-serif"
-      backgroundColor="#1D1D1D"
-      minHeight="100vh"
-      margin="0"
-      position="relative"
-      css={{
-        "&:before": {
-          content: "''",
-          position: "fixed",
-          top: "60px",
-          left: "50%",
-          bottom: "0px",
-          transform: "translateX(-50%)",
-          width: "4px",
-          backgroundColor: "#fff",
-        },
-      }}
-    >
+    const timelineMode = this.state.matches ? "HORIZONTAL" : "VERTICAL";
+
+    const timelineTheme = {
+      primary: "#01bf71",
+      secondary: "#010606",
+      cardBgColor: "#f7f8fa",
+      cardForeColor: "#010606",
+      titleColor: "#fff",
+    };
+
+    return (
       <Box
-        width="calc(100% - 80px)"
-        maxWidth="800px"
-        margin="auto"
+        width="100%"
+        height="400px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
         position="relative"
-        left="-5px"
-        css={{
-          ".entry": entryStyles,
-          ".title": titleStyles,
-          ".big": bigTitleStyles,
-        }}
+        backgroundColor="#010606" // Dark background color
+        overflow="hidden"
       >
-        {/* Entry 1 */}
-        <div className="entry">
-          <div className="title">2011</div>
-          <Box color="#aaa">
-            <p>
-              Neque sunt voluptatibus repellat pariatur ut enim. Eveniet rerum
-              suscipit eveniet amet dignissimos. Doloremque et distinctio quod
-              molestiae ut.
-            </p>
-          </Box>
-        </div>
-
-        {/* Entry 2 */}
-        <div className="entry">
-          <div className="title">2012</div>
-          <Box color="#aaa">
-            <p>Quo nobis cumque dolor iure voluptatem voluptatem alias soluta.</p>
-          </Box>
-        </div>
-
-        {/* Entry 3 */}
-        <div className="entry">
-          <div className="title big">2013</div>
-          <Box color="#aaa">
-            <p>
-              Rerum sit libero possimus amet excepturi. Exercitationem enim
-              dolores sunt praesentium dolorum praesentium.
-            </p>
-          </Box>
-        </div>
-
-        {/* Add more entries following the same structure */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "20%",
+            background: "linear-gradient(to bottom, #010606, transparent)", // Wave-like gradient
+            zIndex: -1,
+            transform: "skewY(-5deg)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "20%",
+            background: "linear-gradient(to bottom, #010606, transparent)", // Wave-like gradient
+            zIndex: -1,
+            transform: "skewY(5deg)",
+          }}
+        />
+        <Chrono
+          items={items}
+          mode={timelineMode}
+          slideShow={false}
+          itemWidth={250}
+          hideControls={true}
+          cardHeight={100}
+          borderLessCards={true}
+          theme={timelineTheme}
+        />
       </Box>
-    </Box>
-  );
-};
+    );
+  }
+}
 
-export default Qualification;
+export default EducationTimeline;
