@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading, IconButton, Link as ChakraLink, Stack, useD
 import { HashLink as ReactRouterHashLink } from "react-router-hash-link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
+import ResumePDF from '../assets/SumitKashyapResume.pdf';
 
 const MotionBox = motion(Box); // Wrap Box with motion
 
@@ -60,8 +61,8 @@ function Header() {
             animate="visible"
             whileHover={{ scale: 1.15 }}
           >
-            <ReactRouterHashLink smooth to="/#qualification" as={ChakraLink} _hover={{ textDecoration: "underline", color: "teal.300" }}>
-              Qualification
+            <ReactRouterHashLink smooth to="/#skills" as={ChakraLink} _hover={{ textDecoration: "underline", color: "teal.300" }}>
+              Skills
             </ReactRouterHashLink>
           </MotionBox>
           <MotionBox
@@ -82,11 +83,12 @@ function Header() {
           >
             <Button
               as="a"
-              href="/path/to/your/resume.pdf"
+              href={ResumePDF}
               target="_blank"
               rel="noopener noreferrer"
               variant="solid"
               colorScheme="red"
+              download="SumitKashyapResume.pdf"
             >
               Download Resume
             </Button>
