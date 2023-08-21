@@ -1,6 +1,9 @@
 import React from 'react'
-import img from '../assets/physics-unscreen.gif';
-import { Flex, Box, Container, Heading, Stack, Text, Card, CardHeader, CardBody, CardFooter, Button, SimpleGrid } from '@chakra-ui/react';
+import img from '../assets/atom.png';
+import img1 from '../assets/code.png';
+import img2 from '../assets/designer.png';
+import img3 from '../assets/javascript.png';
+import { Flex, Box, Container, Heading, Stack, Text, Card, CardHeader, CardBody, CardFooter, SimpleGrid } from '@chakra-ui/react';
 
 const Overview = () => {
   return (
@@ -58,7 +61,7 @@ const Overview = () => {
           transformStyle="preserve-3d"
           transform="perspective(1000px)"
           transition="transform 0.3s"
-          bg="gray.200" 
+          bg="gray.900" 
           borderRadius="lg"
           boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
           onMouseMove={(e) => {
@@ -77,9 +80,95 @@ const Overview = () => {
         height: "275px", 
       }}>
           <img
-        src={img}
-        alt="Web Development Icon"
-        style={{
+          src={img}
+          alt="Web Development Icon"
+          style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "100px", 
+          height: "100px", 
+          }}
+          />
+            <CardHeader>
+              <Heading size="md">React JS</Heading>
+            </CardHeader>
+            <CardFooter>
+            </CardFooter>
+          </Card>
+          <Card variant="elevated"
+          position="relative"
+          transformStyle="preserve-3d"
+          transform="perspective(1000px)"
+          transition="transform 0.3s"
+          bg="gray.900" 
+          borderRadius="lg"
+          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
+          onMouseMove={(e) => {
+        const card = e.currentTarget;
+        const { left, top, width, height } = card.getBoundingClientRect();
+        const x = (e.pageX - left - width / 2) / width;
+        const y = (e.pageY - top - height / 2) / height;
+        const rotationValue = 5;
+        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
+      }}
+      style={{
+        width: "225px",
+        height: "275px", 
+      }}>
+        <img
+          src={img2}
+          alt="UI/UX Icon"
+          style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "100px", 
+          height: "100px", 
+          }}
+          />
+      <CardHeader>
+        <Heading size="md">UI/UX</Heading>
+      </CardHeader>
+      <CardBody>
+        
+      </CardBody>
+      <CardFooter>
+      </CardFooter>
+    </Card>
+        <Card variant="elevated"
+          position="relative"
+          transformStyle="preserve-3d"
+          transform="perspective(1000px)"
+          transition="transform 0.3s"
+          bg="gray.900" 
+          borderRadius="lg"
+          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
+          onMouseMove={(e) => {
+        const card = e.currentTarget;
+        const { left, top, width, height } = card.getBoundingClientRect();
+        const x = (e.pageX - left - width / 2) / width;
+        const y = (e.pageY - top - height / 2) / height;
+        const rotationValue = 5;
+        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
+      }}
+      
+      style={{
+        width: "225px",
+        height: "275px", 
+      }}>
+        <img
+          src={img1}
+          alt="code icon "
+          style={{
           position: "absolute",
           top: "50%",
           left: "50%",
@@ -89,7 +178,7 @@ const Overview = () => {
         }}
       />
             <CardHeader>
-              <Heading size="md">Customer dashboard</Heading>
+              <Heading size="md">HTML5/CSS3</Heading>
             </CardHeader>
             <CardFooter>
             </CardFooter>
@@ -99,73 +188,7 @@ const Overview = () => {
           transformStyle="preserve-3d"
           transform="perspective(1000px)"
           transition="transform 0.3s"
-          bg="gray.200" 
-          borderRadius="lg"
-          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
-          onMouseMove={(e) => {
-        const card = e.currentTarget;
-        const { left, top, width, height } = card.getBoundingClientRect();
-        const x = (e.pageX - left - width / 2) / width;
-        const y = (e.pageY - top - height / 2) / height;
-        const rotationValue = 5;
-        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
-      }}
-      style={{
-        width: "225px",
-        height: "275px", 
-      }}>
-      <CardHeader>
-        <Heading size="md">Customer dashboard</Heading>
-      </CardHeader>
-      <CardBody>
-        <Text>View a summary of all your customers over the last month.</Text>
-      </CardBody>
-      <CardFooter>
-        <Button>View here</Button>
-      </CardFooter>
-    </Card>
-        <Card variant="elevated"
-          position="relative"
-          transformStyle="preserve-3d"
-          transform="perspective(1000px)"
-          transition="transform 0.3s"
-          bg="gray.200" 
-          borderRadius="lg"
-          boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
-          onMouseMove={(e) => {
-        const card = e.currentTarget;
-        const { left, top, width, height } = card.getBoundingClientRect();
-        const x = (e.pageX - left - width / 2) / width;
-        const y = (e.pageY - top - height / 2) / height;
-        const rotationValue = 5;
-        card.style.transform = `perspective(1000px) rotateY(${x * rotationValue}deg) rotateX(${y * -rotationValue}deg) scale(1.05)`;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "perspective(1000px) rotateY(0) rotateX(0) scale(1)";
-      }}
-      style={{
-        width: "225px",
-        height: "275px", 
-      }}>
-            <CardHeader>
-              <Heading size="md">Customer dashboard</Heading>
-            </CardHeader>
-            <CardBody>
-              <Text>View a summary of all your customers over the last month.</Text>
-            </CardBody>
-            <CardFooter>
-              <Button>View here</Button>
-            </CardFooter>
-          </Card>
-          <Card variant="elevated"
-          position="relative"
-          transformStyle="preserve-3d"
-          transform="perspective(1000px)"
-          transition="transform 0.3s"
-          bg="gray.200" 
+          bg="gray.900" 
           borderRadius="lg"
           boxShadow="0 0 50px rgba(255, 255, 255, 0.6)"
           onMouseMove={(e) => {
@@ -183,14 +206,24 @@ const Overview = () => {
         width: "225px", 
         height: "275px", 
       }}>
+          <img
+          src={img3}
+          alt="Web Development Icon"
+          style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "100px", 
+          height: "100px", 
+          }}
+          />
             <CardHeader>
-              <Heading size="md">Customer dashboard</Heading>
+              <Heading size="md">JavaScript</Heading>
             </CardHeader>
             <CardBody>
-              <Text>View a summary of all your customers over the last month.</Text>
             </CardBody>
             <CardFooter>
-              <Button>View here</Button>
             </CardFooter>
           </Card>
         </SimpleGrid>

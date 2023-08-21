@@ -22,8 +22,7 @@ function Header() {
         </Heading>
         <IconButton
           icon={isOpen ? <FaTimes /> : <FaBars />}
-          colorScheme="white"
-          variant="ghost"
+          //colorScheme="white"
           onClick={onToggle}
           display={{ base: "block", md: "none" }}
           aria-label="Toggle navigation menu"
