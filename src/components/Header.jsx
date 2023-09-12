@@ -50,16 +50,6 @@ function Header() {
             animate="visible"
             whileHover={{ scale: 1.15 }}
           >
-            <ReactRouterHashLink smooth to="/#contact" as={ChakraLink} _hover={{ textDecoration: "underline", color: "teal.300" }}>
-              Contact
-            </ReactRouterHashLink>
-          </MotionBox>
-          <MotionBox
-            variants={linkVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover={{ scale: 1.15 }}
-          >
             <ReactRouterHashLink smooth to="/#skills" as={ChakraLink} _hover={{ textDecoration: "underline", color: "teal.300" }}>
               Skills
             </ReactRouterHashLink>
@@ -72,6 +62,16 @@ function Header() {
           >
             <ReactRouterHashLink smooth to="/#overview" _hover={{ textDecoration: "underline", color: "teal.300" }}>
               Overview
+            </ReactRouterHashLink>
+          </MotionBox>
+          <MotionBox
+            variants={linkVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.15 }}
+          >
+            <ReactRouterHashLink smooth to="/#contact" as={ChakraLink} _hover={{ textDecoration: "underline", color: "teal.300" }}>
+              Contact
             </ReactRouterHashLink>
           </MotionBox>
           <MotionBox
