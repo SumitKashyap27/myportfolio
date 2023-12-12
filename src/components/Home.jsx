@@ -10,7 +10,7 @@ const Home = () => {
         display="inline-block"
         width="100%"
         overflow="hidden"
-        backgroundColor={'black'}
+        backgroundColor={'white'}
         id='home'        
       >
         <img

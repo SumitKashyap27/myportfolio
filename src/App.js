@@ -13,8 +13,6 @@ function App() {
       <div style={{ backgroundColor: "black" }}>
       <Routes>
         <Route key="Home" path="/" element={[<Home />,<Overview/>,<Skills/>,<Contact/>]} />
-        {/* <Route key="Overview" path="/Overview" element={<Overview />} /> */}
-        {/* <Route key="Qualification" path="/Qualification" element={<Qualification />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       </div>
