@@ -15,7 +15,7 @@ function Header() {
   };
 
   return (
-    <Box as="nav" backgroundColor="blackAlpha.900" color="white" py={4} px={10} position="sticky" top={0} zIndex={999}>
+    <Box as="nav" backgroundColor="blackAlpha.900" color="white" py={4} px={10} position="sticky" top={0} zIndex={998}>
       <Flex justify="space-between" align="center" maxW="1200px" mx="auto">
         <Heading as="h1" fontSize={["xl", "2xl"]} fontWeight="bold" letterSpacing="wide" px={5}>
           Sumit Kashyap
