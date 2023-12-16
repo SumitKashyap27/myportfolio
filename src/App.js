@@ -5,28 +5,27 @@ import Overview from "./components/Overview";
 import NotFound from "./components/NotFound";
 import Contact from "./components/Contact";
 import Timeline from "./components/Timeline.jsx"
-//import Qualification from "./components/Qualification";
 import Skills from "./components/Skills";
 import ReactAnimatedCursor from 'react-animated-cursor';
 function App() {
   return (
     <Router>
       <ReactAnimatedCursor
-        innerSize={8}
-        outerSize={15}
+        innerSize={15}
+        outerSize={20}
         color='255, 255, 255'
         outerStyle={{
-          border: '2px solid var(--cursor-color)',
+          border: '5px solid var(--cursor-color)',
           borderRadius: '50%',
-          boxShadow: '0 0 15px 2px', // White glow effect
+          boxShadow: '0 0 15px 5px', 
         }}
       />
       <Header />
       <div style={{ backgroundColor: "black" }}>
-      <Routes>
-        <Route key="Home" path="/" element={[<Home />,<Overview/>,<Timeline/>,<Skills/>,<Contact/>]} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <Routes>
+          <Route key="Home" path="/" element={[<Home />, <Overview />, <Timeline />, <Skills />, <Contact />]} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </Router>
   );

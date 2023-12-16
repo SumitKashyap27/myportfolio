@@ -72,7 +72,7 @@ const Skills = () => {
               transformStyle="preserve-3d"
               transform="perspective(1000px)"
               transition="transform 0.3s"
-              bg="gray.200"
+              bg="blue.400"
               borderRadius="50%"
               boxShadow="0 0 20px rgba(255, 255, 255, 0.6)"
               onMouseMove={e => {
@@ -103,7 +103,7 @@ const Skills = () => {
               transformStyle="preserve-3d"
               transform="perspective(1000px)"
               transition="transform 0.3s"
-              bg="gray.200"
+              bg="blue.400"
               borderRadius="50%"
               boxShadow="0 0 20px rgba(255, 255, 255, 0.6)" // Darken and lift the shadow for depth
               onMouseMove={e => {
@@ -134,7 +134,7 @@ const Skills = () => {
               transformStyle="preserve-3d"
               transform="perspective(1000px)"
               transition="transform 0.3s"
-              bg="gray.200"
+              bg="blue.400"
               borderRadius="50%"
               boxShadow="0 0 20px rgba(255, 255, 255, 0.6)"
               onMouseMove={e => {
@@ -196,7 +196,7 @@ const Skills = () => {
               transformStyle="preserve-3d"
               transform="perspective(1000px)"
               transition="transform 0.3s"
-              bg="gray.200"
+              bg="blue.400"
               borderRadius="50%"
               boxShadow="0 0 20px rgba(255, 255, 255, 0.6)"
               onMouseMove={e => {
@@ -227,7 +227,7 @@ const Skills = () => {
               transformStyle="preserve-3d"
               transform="perspective(1000px)"
               transition="transform 0.3s"
-              bg="gray.200"
+              bg="blue.400"
               borderRadius="50%"
               boxShadow="0 0 20px rgba(255, 255, 255, 0.6)"
               onMouseMove={e => {

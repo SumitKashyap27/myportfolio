@@ -38,9 +38,9 @@ const Milestones = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
-      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} textAlign="center">
-        Milestones
+    <Container maxWidth="5xl" p={{ base: 2, sm: 10 }}>
+      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={18} pt={8} pb={5} textAlign="center">
+        Timeline
       </chakra.h3>
       {milestones.map((milestone) => (
         <Flex key={milestone.id} mb="10px">
