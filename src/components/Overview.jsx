@@ -18,20 +18,13 @@ const Overview = () => {
         id='overview'>
 
     <Container maxW={'fit-content'} p={'16'}>
-        <Heading textTransform={'uppercase'}
-        fontSize={"xl"}
-        py='2'
-        color={'grey'}
-        >
-        Introduction
-        </Heading>
         <Heading 
         textTransform={'uppercase'}
         fontSize={"7xl"}
         color={"whiteAlpha.900"}
         py='5'
         >
-          Overview.
+          About.
         </Heading>
 
         <Stack
