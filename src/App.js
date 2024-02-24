@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 //import Timeline from "./components/Timeline.jsx"
 import Skills from "./components/Skills";
 import ReactAnimatedCursor from 'react-animated-cursor';
+import Projects from "./components/Projects";
 function App() {
   return (
     <Router>
@@ -23,7 +24,7 @@ function App() {
       <Header />
       <div style={{ backgroundColor: "black" }}>
         <Routes>
-          <Route key="Home" path="/" element={[<Home />, <Overview />, <Skills />, <Contact />]} />
+          <Route key="Home" path="/" element={[<Home />, <Overview />, <Skills />,<Projects/>, <Contact />]} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
