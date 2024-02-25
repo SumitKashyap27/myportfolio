@@ -70,7 +70,7 @@ const Projects = () => {
           textTransform={'uppercase'}
           fontSize={'7xl'}
           color={'whiteAlpha.900'}
-          py="5"
+          textAlign={'center'}
           paddingBottom={55}
         >
           Projects
@@ -83,10 +83,85 @@ const Projects = () => {
             templateColumns={{
               base: 'repeat(1, 1fr)',
               md: 'repeat(2, 1fr)',
-              lg: 'repeat(3, 1fr)',
+              lg: 'repeat(4, 1fr)',
             }}
           >
-                        <HoverCard>
+            <HoverCard>
+              <BackFace>
+                <div className="content">
+                  <span className="stars"></span>
+                  <b className="desc">Hello</b>
+                  <Desc>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </Desc>
+                </div>
+              </BackFace>
+              <FrontFaceBackground>
+                <b>Hover</b>
+              </FrontFaceBackground>
+            </HoverCard>
+            <HoverCard>
+              <BackFace>
+                <div className="content">
+                  <span className="stars"></span>
+                  <b className="desc">Hello</b>
+                  <Desc>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </Desc>
+                </div>
+              </BackFace>
+              <FrontFaceBackground>
+                <b>Hover</b>
+              </FrontFaceBackground>
+            </HoverCard>
+            <HoverCard>
+              <BackFace>
+                <div className="content">
+                  <span className="stars"></span>
+                  <b className="desc">Hello</b>
+                  <Desc>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </Desc>
+                </div>
+              </BackFace>
+              <FrontFaceBackground>
+                <b>Hover</b>
+              </FrontFaceBackground>
+            </HoverCard>
+            <HoverCard>
+              <BackFace>
+                <div className="content">
+                  <span className="stars"></span>
+                  <b className="desc">Hello</b>
+                  <Desc>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </Desc>
+                </div>
+              </BackFace>
+              <FrontFaceBackground>
+                <b>Hover</b>
+              </FrontFaceBackground>
+            </HoverCard>
+            <HoverCard>
+              <BackFace>
+                <div className="content">
+                  <span className="stars"></span>
+                  <b className="desc">Hello</b>
+                  <Desc>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                  </Desc>
+                </div>
+              </BackFace>
+              <FrontFaceBackground>
+                <b>Hover</b>
+              </FrontFaceBackground>
+            </HoverCard>
+            <HoverCard>
               <BackFace>
                 <div className="content">
                   <span className="stars"></span>

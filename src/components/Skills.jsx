@@ -18,7 +18,7 @@ const Skills = () => {
           textTransform={'uppercase'}
           fontSize={'7xl'}
           color={'whiteAlpha.900'}
-          py="5"
+          textAlign={'center'}
           paddingBottom={55}
         >
           My Top Skills

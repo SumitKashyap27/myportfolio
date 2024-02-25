@@ -34,7 +34,7 @@ const Overview = () => {
           textTransform={'uppercase'}
           fontSize={'7xl'}
           color={'whiteAlpha.900'}
-          py="5"
+          textAlign={'center'}
         >
           About.
         </Heading>
